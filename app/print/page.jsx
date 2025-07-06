@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { supabase } from "@/utils/supabase/client";
-import html2pdf from "html2pdf.js";
+// import html2pdf from "html2pdf.js";
 
 export default function FetchInvoice() {
   const [invoiceNo, setInvoiceNo] = useState("");
@@ -82,7 +82,7 @@ export default function FetchInvoice() {
     let brandTitle = "";
     let bankDetails = "";
     let brandEmail = "";
-
+    const html2pdf = require("html2pdf.js"); 
     if (payment_account === "Bank of India - THE HERITAGE TRAVEL") {
       brandTitle = "THE HERITAGE TRAVEL";
       bankDetails = "BANK:-BANK OF INDIA / ACCOUNT NO:- 900920110000444 / IFSC:- BKID0009009 / BRANCH:- GULMOHAR BRANCH, BHOPAL";
