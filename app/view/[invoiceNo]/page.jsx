@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { supabase } from "@/utils/supabase/client";
-import html2pdf from "html2pdf.js";
+// import html2pdf from "html2pdf.js";
 import { useParams } from "next/navigation";
 
 export default function ViewInvoice() {
@@ -80,7 +80,7 @@ export default function ViewInvoice() {
       table_total, cgst_total, sgst_total, igst_total, final_total,
       additional_total, grand_total, content, additional_charges
     } = fetchedData;
-
+    const html2pdf = require("html2pdf.js");
     let brandTitle = "";
     let bankDetails = "";
     let brandEmail = "";
