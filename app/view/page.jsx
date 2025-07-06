@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { supabase } from "@/utils/supabase/client";
-import html2pdf from "html2pdf.js";
+// import html2pdf from "html2pdf.js";
 
 export default function ViewInvoice() {
   const [invoiceNo, setInvoiceNo] = useState("");
@@ -70,7 +70,7 @@ export default function ViewInvoice() {
       table_total, cgst_total, sgst_total, igst_total,
       grand_total, content, additional_charges
     } = data;
-
+    const html2pdf = require("html2pdf.js");
     let brandTitle = "", bankDetails = "", brandEmail = "";
     if (payment_account === "Bank of India - THE HERITAGE TRAVEL") {
       brandTitle = "THE HERITAGE TRAVEL";
